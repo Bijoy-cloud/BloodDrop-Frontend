@@ -1,0 +1,70 @@
+.header {
+  width: 100vw;
+  height: 50vh;
+  background-color: #ffdab8;
+  border-radius: 0px 0px 320px 0px;
+  position: relative;
+}
+
+.headerContent {
+
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.headerContainer_one {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.headerText {
+  font-size: 2.5em;
+  color: #fb6d41;
+  font-weight: 600;
+}
+.registerBtn {
+  width: 92px;
+  height: 30px;
+  color: white;
+  background: #fc966d;
+  border-radius: 5px;
+  border-color: #fc966d;
+  margin-right: 10px;
+}
+.headerContainer_two {
+  margin-top: 40px;  
+  width: 40%;
+  height: 100%;
+}
+#mainImg {
+ 
+  object-fit: contain;
+  width: 130%;
+  height: 120%;
+  
+}
+.homeAbout{
+    max-width:1280px ;
+    /* border: 1px solid black; */
+    margin:5% auto;
+    display: flex;
+    flex-direction: column;
+}
+.aboutContainer{
+    display: flex;
+}
+.aboutContainer p{
+    display: flex;
+    align-items: center;
+    /* font-size: 1.1em; */
+}
+.homeFooter{
+    width:100vw;
+}
+.homeFooterList{
+    display: flex;
+    justify-content: space-evenly;
+}

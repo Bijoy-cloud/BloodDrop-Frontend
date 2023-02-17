@@ -1,0 +1,43 @@
+.bloodProfile{
+    display: flex;
+    justify-content: center;
+    
+}
+.bloodProfileContainer{
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+
+    position: relative;
+    display: flex;
+    background: #FEDCC8;
+    padding-left: 4px;
+    margin-bottom: 15px;
+
+}
+.profileContainerOne{
+    display: flex;
+    align-items: center;
+}
+.profilePic{
+    width: 80px;
+    
+}
+.profileContainerTwo{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profileContainerTwo{
+    display: flex;
+    
+}
+.profileSubcontainerOne{
+    display: flex;
+    flex-direction: column;
+}
+.tag{
+    display: inline;
+}

@@ -1,0 +1,25 @@
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    /* max-width: 1280px; */
+    /* padding-top: 20px; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffdab8;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+  .logoImg{
+    height: 60px;
+  }
+  .navList {
+    list-style: none;
+    display: flex;
+  }
+  .navList > .li {
+    margin-right: 2em;
+  }

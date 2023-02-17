@@ -1,0 +1,89 @@
+.donorRegisterContainer{
+    width: 100vw;
+    /* border: 1px solid black; */
+    /* margin: 0 auto; */
+}
+.donorRegisterFormContainer{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+}
+.donorRegister{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.registerHeader{
+    color: #2b120b;
+}
+.donorRegisterHeader{
+    text-align: center;
+    align-self: center;
+}
+.donorRegisterForm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 80%;
+    gap: 20px;
+    /* border: 1px solid black; */
+
+}
+.label{
+    font-size: 30px;
+    font-size: 2.5em;
+    color: #fb6d41;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.donorInput{
+    width: 400px;
+    height:40px;
+    border: none;
+    background: rgba(252, 150, 109, 0.24);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 8px;
+    padding: 10px;
+}
+.flex{
+    display: flex;
+}
+.flex_donorRegister{
+    justify-content: space-between;
+    align-items: center;
+
+}
+.subGroup{
+    /* margin-right: 6%; */
+    align-items: center;
+}
+.donorBtn{
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 10px;
+    /* border: none; */
+    text-align: center;
+    background: #f6b69d;
+    /* align-self: center; */
+}
+.donorBtn:hover{
+    background-color: #ff6518de;
+  box-shadow: 0 5px #666;
+  /* transform: translateY(4px); */
+}
+/* .donorBtn:c */
+.donorRegisterBtn{
+    width: 200px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 10px;
+    /* border: none; */
+    text-align: center;
+    background: #fc966d;
+    align-self: center;
+}

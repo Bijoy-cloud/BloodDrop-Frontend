@@ -1,0 +1,26 @@
+
+.footer{
+    width: 100vw;
+    background-image: url('./footerImg.svg');
+    height: 30vh;
+    position: relative;
+    background-size: contain;
+    margin-top: 20px;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment:fixed; */
+}
+
+.footerList{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 5%;
+}
+.footerList>li{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+}
