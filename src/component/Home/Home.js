@@ -5,7 +5,6 @@ import doctorImg from "./doctorImg.svg";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 import Service from "./Services/Service";
-import Cookies from 'js-cookie';
 import { Link } from "react-router-dom";
 import axios from "../../api/axios";
 import Navbar from "../Navbar/Navbar";
@@ -32,7 +31,7 @@ const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
     <>
       <div className="header">
       <Navbar/>
-      {console.log("tokeen is",Cookies.get("access_token"))}
+      {/* {console.log("tokeen is",Cookies.get("access_token"))} */}
         <div className="headerContent">
           <div className="headerContainer_one">
             <span className="headerText" tent>

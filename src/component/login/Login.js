@@ -14,15 +14,15 @@ function Login() {
   const navigate = useNavigate();
   // console.log("tokeen is",Cookies.get("access_token"))
 
-  const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
-//   {
-//     withCredentials: true,
-//     headers: { 'Content-Type': 'multipart/form-data' },
-// }
-)
-  .then(res=>{
-    console.log("res",res)
-  })}
+//   const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
+// //   {
+// //     withCredentials: true,
+// //     headers: { 'Content-Type': 'multipart/form-data' },
+// // }
+// )
+  // .then(res=>{
+  //   console.log("res",res)
+  // })}
   
   const Auth = async (e) => {
     e.preventDefault();

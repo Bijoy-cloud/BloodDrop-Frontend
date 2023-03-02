@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import searchLogo from "./searchLogo.svg"
 import "./BloodGroupList.css";
 import Navbar from "../Navbar/Navbar";
