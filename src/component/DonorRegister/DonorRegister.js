@@ -32,29 +32,13 @@ function DonorRegister() {
     setpreviousBloodDonation(false);
   };
 
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   lastname: "",
-  //   bloodGroup: "O+",
-  //   number: (0),
-  //   city: "",
-  //   previousBloodDonation: false,
-  // });
 
-  // const handleChange = (e) => {
-  //   console.log("e os",e.target.value)
-  //   // const { name, value} = e.target;
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.id]: e.target.value
-  // });
-  // console.log("Form",formData)
-  // };
   const donorRegisterSubmit = async (e) => {
     e.preventDefault();
     console.log("e hobe");
     // console.log("e holo", e.target.name.value);
-
+    const token = sessionStorage.getItem('token');
+    console.log(token)
     await axios
       .post(
         "/registerDonor",
@@ -67,14 +51,23 @@ function DonorRegister() {
             : "O+",
           city: e.target.city.value,
           previousBloodDonation: previousBloodDonation,
-        },
-        { withCredentials: true }
+        },{
+          headers:{
+            token:token
+          }
+        }
+        
+        
       )
       .then((res) => {
+        // console.log(res)
         alert("Donor Registration Successful");
          navigate("/")
       })
-      .catch((err) => alert(err.response.data.message));
+      .catch((err) => {
+        console.log(err)
+        alert(err.response.data.message)
+      });
   };
 
   return (

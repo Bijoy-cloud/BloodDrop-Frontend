@@ -1,4 +1,5 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import mainPic from "./mainPic.svg";
 import doctorImg from "./doctorImg.svg";
 import "./Home.css";
@@ -9,13 +10,13 @@ import { Link } from "react-router-dom";
 import axios from "../../api/axios";
 import Navbar from "../Navbar/Navbar";
 function Home() {
-//  useEffect(() => {
-//    axios.
+  
+  // const token = sessionStorage.getItem('token')
+
+  const [isLoggedOut, setIsLoggedOut] = useState(sessionStorage.getItem('token')?true:false);
+
  
-//    return () => {
-//      second
-//    }
-//  }, [third])
+
 const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
 //   {
 //     withCredentials: true,
@@ -40,14 +41,14 @@ const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
             {/* <button onClick={btn}>HEZllo</button> */}
             <span className="headerText">In your</span>
             <span className="headerText">Blood</span>
-            <div className="headerButton">
+           { isLoggedOut ? "": <div className="headerButton">
               <button className="registerBtn">
                 <Link to="/signup" style={{ textDecoration: 'none', color:'white'}}>Sign Up</Link>
                 </button>
               <button className="registerBtn">
                 <Link to="/login" style={{ textDecoration: 'none', color:'white' }}>Log In</Link>
                 </button>
-            </div>
+            </div>}
           </div>
           <div className="headerContainer_two">
             <img id="mainImg" src={mainPic} alt="Pic-1" />

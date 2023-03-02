@@ -3,16 +3,16 @@ import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 import authImg from "./authImg.svg";
 import "./Login.css";
-import Cookies from 'js-cookie';
-import {useCookies} from 'react-cookie';
+
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 function Login() {
-  const [cookies, setCookie] = useCookies(['access_token']);
+ 
+  
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  console.log("tokeen is",Cookies.get("access_token"))
+  // console.log("tokeen is",Cookies.get("access_token"))
 
   const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
 //   {
@@ -29,18 +29,17 @@ function Login() {
       await axios.post("/login", {
         name: name,
         password: password,
-      },{
-        withCredentials:true
       })
       .then(function(res){
-        // console.log(res.cookies)
-      //  console.log("cookies",res.)
-      setCookie(res.data, { path: "/" });
+        
+        // Save the token in the session
+        window.sessionStorage.setItem('token', res.data.token);
+        // console.log(res.data.token)
         alert("Log In SuccessFul")
         navigate("/");
       }
       ).catch(function (error) {
-        console.log("error is",error);
+        alert("error is",error);
       });
 
       

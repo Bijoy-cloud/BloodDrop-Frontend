@@ -18,11 +18,12 @@ function Register() {
       }).then(res=>{
         console.log("request successfull",res);
         navigate("/");
-      }).catch(error=>{
-        console.log("error is", error)
-        if (error.response) {
-          console.log(error.response.data.msg);
-        }
+      }).catch((error)=>{
+
+        alert( error.response.data)
+        // if (error.response) {
+        //   console.log(error.data.msg);
+        // }
       })
     } catch (error) {
       
