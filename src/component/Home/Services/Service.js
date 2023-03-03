@@ -1,7 +1,6 @@
 import React from "react";
 import donateImg from "./donateImg.svg";
 import searchImg from "./searchImg.svg";
-import reciptImg from "./reciptImg.svg";
 import "./Service.css";
 import { Link } from "react-router-dom";
 

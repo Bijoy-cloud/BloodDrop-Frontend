@@ -1,12 +1,11 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import mainPic from "./mainPic.svg";
 import doctorImg from "./doctorImg.svg";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 import Service from "./Services/Service";
 import { Link } from "react-router-dom";
-import axios from "../../api/axios";
 import Navbar from "../Navbar/Navbar";
 function Home() {
   
@@ -16,17 +15,17 @@ function Home() {
 
  
 
-const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
-//   {
-//     withCredentials: true,
-//     headers: { 'Content-Type': 'multipart/form-data' },
-// }
-).then(res=>{
-    console.log("res",res)
-  })
-.catch(err=>{
-  console.log("err is",err)
-})}
+// const btn = () =>{axios.get("/getcookie",{ withCredentials: true }
+// //   {
+// //     withCredentials: true,
+// //     headers: { 'Content-Type': 'multipart/form-data' },
+// // }
+// ).then(res=>{
+//     console.log("res",res)
+//   })
+// .catch(err=>{
+//   console.log("err is",err)
+// })}
   return (
     <>
       <div className="header">
