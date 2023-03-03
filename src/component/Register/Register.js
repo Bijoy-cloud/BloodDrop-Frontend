@@ -16,7 +16,7 @@ function Register() {
         name: name,
         password: password,
       }).then(res=>{
-        console.log("request successfull",res);
+        alert("Sign Up SuccessFul");
         navigate("/");
       }).catch((error)=>{
 
