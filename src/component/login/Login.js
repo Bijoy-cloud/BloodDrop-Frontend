@@ -61,7 +61,7 @@ function Login() {
       <div className="subAuthContainer_right">
         <span className="headerText">Hello! Welcome back</span>
  
-        {/* <div className="loginContainer"> */}
+        
           <div className="authSubcontainer">
             <span className="headerText loginHeader">Login</span>
             <form onSubmit={Auth} action="" className="signUp_form">

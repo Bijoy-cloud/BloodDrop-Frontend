@@ -3,12 +3,14 @@
     width: 100%;
     /* border: 3px solid black; */
     justify-content: center;
+    margin: 20px auto;
 }
 .searchContainer{
     display: flex;
     justify-content: center;
-    width: 800px;
-    height: 70px;
+    /* width: 800px; */
+    align-items: center;
+    /* height: 70px; */
 }
 .searchLogo{
     height: 40px;
@@ -28,9 +30,28 @@
     width: 60px;
     height: 40px;
     border-radius: 8px;
+    cursor: pointer;
     /* background: rgba(252, 150, 109, 0.24); */
 
 }
 .bloodGroup{
     width: 100%;
+}
+@media only screen and (max-width:600px){
+    .searchContainer{
+        /* display: block; */
+        /* flex-direction: column; */
+    }
+    .searchInput{
+        width: 35vw;
+        margin-right: 10px;
+    }
+    .searchLogo{
+        width: 30px;
+        height: 40px;
+    }
+    .searchSubmit{
+        width: 50px;
+        height: 40px;
+    }
 }

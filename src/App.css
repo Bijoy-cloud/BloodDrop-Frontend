@@ -7,3 +7,8 @@
     /* height: 100vh; */
     margin: 0 auto;
 }
+@media only screen and (max-width:600px){
+    .bodyContainer{
+        font-size: 14px;
+    }
+}

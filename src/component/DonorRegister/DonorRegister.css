@@ -28,7 +28,7 @@
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
-    width: 80%;
+    width: 90%;
     gap: 20px;
     /* border: 1px solid black; */
 
@@ -86,4 +86,17 @@
     text-align: center;
     background: #fc966d;
     align-self: center;
+}
+@media only screen and (max-width:600px){
+    .donorInput{
+        width: 90vw;
+    }
+    .subGroup{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+    .flex_donorRegister{
+        flex-direction: column;
+    }
 }

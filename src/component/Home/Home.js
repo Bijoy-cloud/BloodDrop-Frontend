@@ -33,7 +33,7 @@ function Home() {
       {/* {console.log("tokeen is",Cookies.get("access_token"))} */}
         <div className="headerContent">
           <div className="headerContainer_one">
-            <span className="headerText" tent>
+            <span className="headerText" >
               Be A hero - IT's
             </span>
             {/* <button onClick={btn}>HEZllo</button> */}
@@ -57,11 +57,12 @@ function Home() {
       <div className="homeAbout">
         <span className="headerText">About</span>
         <div className="aboutContainer">
+        <img className="doctorImg" src={doctorImg} alt="doctorImg" />
           <p>
            
-Blood donation is an important and generous act of humanity. It helps save lives, as blood is a crucial element for treating some medical conditions. Unfortunately, not enough people donate blood due to various reasons. BloodDrop is a website which helps in facilitating blood donations. It connects those who are willing to donate, with those who need it. Through BloodDrop, the donors can easily register and find out about the nearest blood donation center where they can donate. It also helps to keep track of the donors' donation history, and reminds them when it's time for their next donation. BloodDrop ensures that the blood reaches the right people, as it enables the donors to specify the blood group and area of the recipient. This helps to ensure that the right kind of blood reaches the right person. BloodDrop is an innovative way to facilitate blood donations, and helps to save lives.
+Blood donation is an important and generous act of humanity. It helps save lives, as blood is a crucial element for treating some medical conditions. Unfortunately, not enough people donate blood due to various reasons. BloodDrop is a website which helps in facilitating blood donations. It connects those who are willing to donate, with those who need it. Through BloodDrop, the donors can easily register and find out about the nearest blood donation center where they can donate.
           </p>
-          <img src={doctorImg} alt="doctorImg" />
+         
         </div>
       </div>
       <Service />

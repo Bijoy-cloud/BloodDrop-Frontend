@@ -16,11 +16,53 @@
   .logoImg{
     height: 60px;
   }
-  .navList {
+  .barsIcon{
+    display: none;
+  }
+  .navList ul{
     list-style: none;
     display: flex;
+    /* display: none; */
   }
-  .navList > .li {
+  .navList ul> li {
     margin-right: 2em;
-    color: #fb6d41
+    /* color: white; */
+  }
+  .li{
+    color: #fb6d41;
+  }
+  li:hover{
+    /* background-color: #fb6d41; */
+  }
+
+  @media only screen and (max-width:600px) {
+    .barsIcon{
+      display: block;
+      margin-right: 20px;
+    }
+    .navList{
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100vw;
+    background: #382c28;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    }
+    .show{
+      visibility: visible;
+      opacity: 1;
+    }
+    .navList ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    
+    }
+    .navList ul>li{
+      margin: 10px;
+    }
   }

@@ -10,7 +10,7 @@ function BloodProfile(props) {
           </div>
           <div className="profileContainerTwo">
             <div className="profileSubcontainerOne">
-              <h3 className="name">{props.name}</h3>
+              <h3 className="name">{props.name} {props.lastname}</h3>
               <span>conatact Number-{props.number}</span>
             </div>
             <div className="profileSubcontainerOne">

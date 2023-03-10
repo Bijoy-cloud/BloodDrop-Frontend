@@ -44,11 +44,6 @@ function BloodGroupList(params) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(bloodGroup)
-    console.log("e", e)
-    const data = {
-      city,
-      bloodGroup
-    };
   axios
   .get(`/findDonor?bloodgroup=${bloodGroup}&city=${city}`)
   .then(response => {
@@ -109,6 +104,7 @@ function BloodGroupList(params) {
           apiData.map(data => (
             <BloodProfile
               name={data.name}
+              lastname={data.lastname}
               bloodgroup={data.bloodGroup}
               location={data.location}
               number={data.phoneNumber}

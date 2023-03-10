@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  
 }
 .headerText {
   font-size: 2.5em;
@@ -33,6 +34,7 @@
   border-radius: 5px;
   border-color: #fc966d;
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 .headerContainer_two {
   margin-top: 40px;  
@@ -59,6 +61,7 @@
 .aboutContainer p{
     display: flex;
     align-items: center;
+    margin: 10px;
     /* font-size: 1.1em; */
 }
 .homeFooter{
@@ -67,4 +70,23 @@
 .homeFooterList{
     display: flex;
     justify-content: space-evenly;
+}
+@media only screen and (max-width:600px){
+  .headerContainer_two{
+    margin-right: 50px;
+    width: 50%;
+  }
+  .homeAbout{
+    align-items: center;
+  }
+  .aboutContainer{
+    flex-direction: column;
+    width: 100vw;
+  }
+  .aboutContainer p{
+    margin: 10px;
+  }
+  .doctorImg{
+    margin: 5px;
+  }
 }
