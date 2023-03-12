@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import mainPic from "./mainPic.svg";
-import doctorImg from "./doctorImg.svg";
+import doctorImg from "./doctorImg.jpg";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 import Service from "./Services/Service";

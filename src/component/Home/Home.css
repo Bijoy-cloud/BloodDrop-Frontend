@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  
+  margin-left: 10px;
 }
 .headerText {
   font-size: 2.5em;
@@ -57,6 +57,7 @@
 }
 .aboutContainer{
     display: flex;
+    align-items: center;
 }
 .aboutContainer p{
     display: flex;
@@ -71,7 +72,11 @@
     display: flex;
     justify-content: space-evenly;
 }
-@media only screen and (max-width:600px){
+.doctorImg{
+  width: 450px;
+  height: 250px;
+}
+@media only screen and (max-width:650px){
   .headerContainer_two{
     margin-right: 50px;
     width: 50%;
@@ -87,6 +92,8 @@
     margin: 10px;
   }
   .doctorImg{
+    width:98vw;
+    /* max-width: 500px; */
     margin: 5px;
   }
 }
