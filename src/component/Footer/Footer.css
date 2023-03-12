@@ -4,7 +4,7 @@
     width: 100vw;
     height: 20vh;
     position: relative; 
-    background-size: cover;
+    background-size: contain;
     margin-top: 35px;
     /* background-position: center; */
     /* background-repeat: no-repeat; */
@@ -28,5 +28,6 @@
     .footer{
         margin-top: 10px;
         background-position: buttom;
+        background-size: cover;
     }
 }

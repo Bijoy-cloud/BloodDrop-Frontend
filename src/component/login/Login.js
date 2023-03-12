@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 import authImg from "./authImg.svg";
+import loading from "./loading.gif"
 import "./Login.css";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 function Login() {
  
-  
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -26,6 +27,8 @@ function Login() {
   
   const Auth = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
+    try{
       await axios.post("/login", {
         name: name,
         password: password,
@@ -35,14 +38,22 @@ function Login() {
         // Save the token in the session
         window.sessionStorage.setItem('token', res.data.token);
         // console.log(res.data.token)
+        // setIsLoading(false)
         alert("Log In SuccessFul")
         navigate("/");
       }
       ).catch(function (error) {
+        // setIsLoading(false)
+        console.log("err is",error)
         alert("error is",error);
       });
+    
+    }catch{
 
-      
+    }
+      finally{
+        setIsLoading(false)
+      }
    
   };
   return (
@@ -59,6 +70,9 @@ function Login() {
         </div>
       </div>
       <div className="subAuthContainer_right">
+        {isLoading && 
+        <img className="loading-icon"  src={loading} alt="loading"   />
+        }
         <span className="headerText">Hello! Welcome back</span>
  
         

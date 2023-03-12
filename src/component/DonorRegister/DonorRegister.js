@@ -5,8 +5,9 @@ import "./DonorRegister.css";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-
+import loading from "../login/loading.gif"
 function DonorRegister() {
+  const [isLoading,setIsLoading] = useState(false)
   const [yesColor, setYesColor] = useState("#f6b69d");
   const [noColor, setNoColor] = useState("#f6b69d");
   const [previousBloodDonation, setpreviousBloodDonation] = useState(true);
@@ -35,7 +36,7 @@ function DonorRegister() {
 
   const donorRegisterSubmit = async (e) => {
     e.preventDefault();
-    console.log("e hobe");
+    setIsLoading(true)
     // console.log("e holo", e.target.name.value);
     const token = sessionStorage.getItem('token');
     console.log(token)
@@ -61,11 +62,13 @@ function DonorRegister() {
       )
       .then((res) => {
         // console.log(res)
+        setIsLoading(false)
         alert("Donor Registration Successful");
          navigate("/")
       })
       .catch((err) => {
-        console.log(err)
+        setIsLoading(false)
+        // console.log(err)
         alert(err.response.data.message)
       });
   };
@@ -73,12 +76,16 @@ function DonorRegister() {
   return (
     <>
       <Navbar />
+      {isLoading && 
+        <img className="loading-icon" src={loading} alt="loading"/>
+        }
       <div className="donorRegisterContainer">
         <div className="donorRegisterFormContainer">
           <div className="donorRegister">
             <span className="headerText registerHeader">
               Donor Register Form
             </span>
+          
             <form className="donorRegisterForm" onSubmit={donorRegisterSubmit}>
               <div className="flex flex_donorRegister">
                 <div className="flex subGroup">

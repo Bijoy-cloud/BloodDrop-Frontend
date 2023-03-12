@@ -5,6 +5,7 @@ import "./BloodGroupList.css";
 import Navbar from "../Navbar/Navbar";
 import axios from "../../api/axios";
 import BloodProfile from "./BloodProfile/BloodProfile";
+import loading from "../login/loading.gif"
 // function BloodGroupList() {
 //         const [data, setData] = useState([]);
 //         const [startIndex, setStartIndex] = useState(0);
@@ -38,16 +39,18 @@ import BloodProfile from "./BloodProfile/BloodProfile";
 
 // }
 function BloodGroupList(params) {
+  const [isLoading, setIsLoading] = useState(false);
   const [city, setCity] = useState('');
   const [bloodGroup, setBloodGroup] = useState('O%2B');
   const [apiData, setApiData] = useState([])
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(bloodGroup)
-  axios
+    setIsLoading(true)
+    // console.log(bloodGroup)
+    try{
+  await axios
   .get(`/findDonor?bloodgroup=${bloodGroup}&city=${city}`)
   .then(response => {
-    console.log(response)
     setApiData(response.data.data)
     // handle the response here
   })
@@ -55,6 +58,11 @@ function BloodGroupList(params) {
     console.log("error",error)
     // handle the error here
   });
+}catch{
+
+}finally{
+  setIsLoading(false)
+}
     // axios.get("/getcookie", {
     //   params: data
     // })
@@ -100,6 +108,9 @@ function BloodGroupList(params) {
       
       </div>
       <div className="bloodGroup">
+      {isLoading && 
+        <img className="loading-icon" src={loading} alt="loading"/>
+        }
         {
           apiData.map(data => (
             <BloodProfile
