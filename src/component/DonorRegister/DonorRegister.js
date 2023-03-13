@@ -68,7 +68,7 @@ function DonorRegister() {
       })
       .catch((err) => {
         setIsLoading(false)
-        // console.log(err)
+        console.log(err)
         alert(err.response.data.message)
       });
   };
