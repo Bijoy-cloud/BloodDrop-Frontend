@@ -52,6 +52,9 @@ function BloodGroupList(params) {
   .get(`/findDonor?bloodgroup=${bloodGroup}&city=${city}`)
   .then(response => {
     setApiData(response.data.data)
+    if(response.data.data.length===0){
+      alert("No Donor Found")
+    }
     // handle the response here
   })
   .catch(error => {

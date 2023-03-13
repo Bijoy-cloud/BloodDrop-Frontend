@@ -34,18 +34,15 @@ function Login() {
         password: password,
       })
       .then(function(res){
-        
-        // Save the token in the session
         window.sessionStorage.setItem('token', res.data.token);
-        // console.log(res.data.token)
-        // setIsLoading(false)
+        
         alert("Log In SuccessFul")
         navigate("/");
       }
       ).catch(function (error) {
         // setIsLoading(false)
-        console.log("err is",error)
-        alert("error is",error);
+        // console.log("err is",error.response.data.message)
+        alert(`error is ${error.response.data.message}`);
       });
     
     }catch{
