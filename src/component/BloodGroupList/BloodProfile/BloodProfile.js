@@ -16,7 +16,7 @@ function BloodProfile(props) {
             <div className="profileSubcontainerOne">
               <div>
                 <h3 className="tag">Location : </h3>
-                <span>{props.city}</span>
+                <span>{props.location}</span>
               </div>
               <div>
                 <h3 className="tag">BloodGroup : </h3>

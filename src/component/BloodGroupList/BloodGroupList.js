@@ -120,7 +120,7 @@ function BloodGroupList(params) {
               name={data.name}
               lastname={data.lastname}
               bloodgroup={data.bloodGroup}
-              location={data.location}
+              location={data.city}
               number={data.phoneNumber}
             />
           ))
